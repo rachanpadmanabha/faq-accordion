@@ -1,0 +1,90 @@
+/* Apply styles to the whole document */
+
+/* Apply styles to the background image */
+.App {
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh; /* Adjust the height of the background image */
+  width: 100%;
+}
+
+/* Apply color to the rest of the screen */
+.color-layer {
+  position: absolute;
+  top: 40%; /* Position the color layer below the background image */
+  left: 0;
+  width: 100%;
+  height: 60vh; /* Adjust the height of the color layer */
+  background-color: hsl(275, 100%, 97%);
+}
+
+/* Center the .faq-container */
+.faq-container {
+  position: absolute;
+  top: 50%; /* Position the FAQ container in the middle of the screen */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the FAQ container */
+  z-index: 1; /* Ensure the FAQ container appears above the color layer */
+  border-radius: 20px;
+  background-color: white;
+  max-width: 80%; /* Optionally limit the width of the container */
+  padding: 40px; /* Add some padding for better readability */
+}
+
+/* Styles for the header */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add some space below the header */
+}
+
+.header img {
+  margin-right: 10px; /* Add space between the image and text */
+}
+
+.header div {
+  font-weight: bold; /* Make the header text bold */
+}
+
+/* Styles for the text inside .faq-container */
+.faq-container p {
+  margin-bottom: 20px; /* Add space between paragraphs */
+  line-height: 1.6;
+
+  width: 600px; /* Adjust line height for better readability */
+}
+.heading {
+  font-size: xxx-large;
+  font-weight: 800;
+  margin-left: 20px;
+}
+.question-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.question {
+  font-size: large;
+  font-weight: 700;
+}
+.question-block:hover {
+  color: hsl(292, 74%, 33%);
+  cursor: pointer;
+}
+.answer {
+  color: hsl(292, 16%, 49%);
+  width: fit-content;
+}
+
+.faq-block {
+  padding: 20px 0;
+  border-color: lightgray;
+  border-bottom-style: solid;
+  border-width: 0.5px;
+}
+.faq-block:last-child {
+  border: 0;
+}
